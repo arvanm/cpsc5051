@@ -212,7 +212,6 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\FAQ.cshtml" />
-    <Content Include="Views\Home\Chatroom.cshtml" />
     <Content Include="Views\Chat\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
