@@ -13,6 +13,11 @@ namespace Voluncheer.Controllers
             return View();
         }
 
+        public ActionResult FAQ()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
