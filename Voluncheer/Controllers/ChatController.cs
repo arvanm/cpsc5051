@@ -14,5 +14,11 @@ namespace Voluncheer.Controllers
             return View();
         }
 
+        // GET: DirectMessage
+        public ActionResult DirectMessage()
+        {
+            return View();
+        }
+
     }
 }
