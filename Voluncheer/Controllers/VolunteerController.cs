@@ -13,5 +13,11 @@ namespace Voluncheer.Controllers
         {
             return View();
         }
+
+        // GET: VolunteerList
+        public ActionResult VolunteerList()
+        {
+            return View();
+        }
     }
 }
