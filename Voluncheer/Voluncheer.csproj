@@ -218,6 +218,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Chat\DirectMessage.cshtml" />
     <Content Include="Views\Volunteer\VolunteerList.cshtml" />
+    <Content Include="Views\Home\DocumentRepository.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
