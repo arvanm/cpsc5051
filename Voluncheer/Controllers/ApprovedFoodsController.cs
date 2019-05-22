@@ -18,5 +18,10 @@ namespace Voluncheer.Controllers
         {
             return View();
         }
+
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
     }
 }
