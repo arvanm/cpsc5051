@@ -141,8 +141,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Img\Battle.png" />
     <Content Include="Content\Img\Diamond.png" />
+    <Content Include="Content\Img\email.png" />
     <Content Include="Content\Img\Emerald.png" />
     <Content Include="Content\Img\Hotshot.jpg" />
+    <Content Include="Content\Img\message.png" />
     <Content Include="Content\Img\Superstar.jpg" />
     <Content Include="Content\Img\Warrior.png" />
     <Content Include="favicon.ico" />
