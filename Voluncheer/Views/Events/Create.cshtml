@@ -3,75 +3,250 @@
     ViewBag.Title = "Create";
 }
 <h2>Create a New Event</h2>
-<!-- basic details section -->
-<h3>Basic Details</h3>
-<div id="basic-details" class="container border">
-    <div class="form-group">
-        <label for="title">Title:</label>
-        <input name="title" type="text" placeholder="E.g. Practice" class="form-control" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- basic details section -->
+            <h3>Basic Details</h3>
+            <div id="basic-details" class="container border">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input name="title" type="text" placeholder="E.g. Practice" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input name="location" type="text" placeholder="E.g. Your team's high school" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="location-map">Link to Map (optional):</label>
+                    <input name="location-map" type="text" placeholder="https://www.google.com/maps/..." class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="date-and-time">Date and Time:</label>
+                    <input name="date-and-time" type="date" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="event-type">Event Title:</label>
+                    <select name="event-type" class="form-control">
+                        <option value="practice">Practice</option>
+                        <option value="competition">Competition</option>
+                        <option value="Team Building">Practice</option>
+                    </select>
+                </div>
+            </div>
+            <!-- uniform picker -->
+            <h3>Uniform Components</h3>
+            <div id="uniform-components" class="container border">
+                <div class="form-group">
+                    <label for="uniform">Uniform name:</label>
+                    <select name="uniform" class="form-control">
+                        <option>Casual Practice Gear</option>
+                        <option>Invincible</option>
+                        <option>Fearless</option>
+                        <option>Force</option>
+                        <option>Swift</option>
+                        <option>Echo</option>
+                        <option>Shell</option>
+                    </select>
+                </div>
+                <!-- Original idea (easy multi-select picker); doesn't meet AC, so doing a text input and a file upload input
+                <label for="uniform-items">Choose Uniform Items Here (select more than one)</label>
+                <select name="uniform-items" class="form-control" multiple>
+                    <option>Casual Practice Gear</option>
+                    <option>Invincible Top</option>
+                    <option>Fearless Top</option>
+                    <option>Force Top</option>
+                    <option>Swift Top</option>
+                    <option>Echo Top</option>
+                    <option>Shell Top</option>
+                    <option>Odyssey Shrug</option>
+                    <option>Odyssey Gauntlet Sleeves</option>
+                    <option>Odyssey Spats</option>
+                    <option>Invincible Skirt</option>
+                    <option>Fearless Skirt</option>
+                    <option>Force Skirt</option>
+                    <option>Swift Skirt</option>
+                    <option>Echo Skirt</option>
+                    <option>Grand Skirt</option>
+                    <option>Crossover Skirt</option>
+                    <option>Glory Skirt</option>
+                    <option>Arena Skirt</option>
+                    <option>Gladiator Skirt</option>
+                    <option>Nike Black Shoes</option>
+                    <option>Reebok Blue Shoes</option>
+                    <option>Asics Red Shoes</option>
+                </select>
+                -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Food</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <select class="form-control">
+                        <option>Snack</option>
+                        <option>Drinks</option>
+                        <option>Lunch</option>
+                    </select>
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>Amanda N.</option>
+                        <option>Tad K.</option>
+                        <option>Andy N.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <select class="form-control">
+                        <option>Snack</option>
+                        <option>Drinks</option>
+                        <option>Lunch</option>
+                    </select>
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>Amanda N.</option>
+                        <option selected>Tad K.</option>
+                        <option>Andy N.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <select class="form-control">
+                        <option>Snack</option>
+                        <option>Drinks</option>
+                        <option>Lunch</option>
+                    </select>
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>Amanda N.</option>
+                        <option>Tad K.</option>
+                        <option selected>Andy N.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-success">
+                        + Add
+                    </button>
+                </li>
+            </ul>
+            <h3>Drivers</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option>Manu G.</option>
+                        <option>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option selected>Manu G.</option>
+                        <option>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option>Manu G.</option>
+                        <option selected>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-success">
+                        + Add
+                    </button>
+                </li>
+            </ul>
+            <h3>Cleanup</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option>Manu G.</option>
+                        <option>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option selected>Manu G.</option>
+                        <option>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option>Manu G.</option>
+                        <option selected>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-success">
+                        + Add
+                    </button>
+                </li>
+            </ul>
+            <h3>Hosting</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option>Manu G.</option>
+                        <option>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option selected>Manu G.</option>
+                        <option>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label for="qty">Qty:</label>
+                    <input name="qty" type="number" class="form-control" />
+                    <label for="assignee">Assignee:</label>
+                    <select class="form-control">
+                        <option>George W.</option>
+                        <option>Manu G.</option>
+                        <option selected>Sandy H.</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-success">
+                        + Add
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="location">Location:</label>
-        <input name="location" type="text" placeholder="E.g. Your team's high school" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="location-map">Link to Map (optional):</label>
-        <input name="location-map" type="text" placeholder="https://www.google.com/maps/..." class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="date-and-time">Date and Time:</label>
-        <input name="date-and-time" type="date" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="event-type">Event Title:</label>
-        <select name="event-type" class="form-control">
-            <option value="practice">Practice</option>
-            <option value="competition">Competition</option>
-            <option value="Team Building">Practice</option>
-        </select>
-    </div>
-</div>
-<!-- uniform picker -->
-<h3>Uniform Components</h3>
-<div id="uniform-components" class="container border">
-    <div class="form-group">
-        <label for="uniform">Uniform name:</label>
-        <select name="uniform" class="form-control">
-            <option>Casual Practice Gear</option>
-            <option>Invincible</option>
-            <option>Fearless</option>
-            <option>Force</option>
-            <option>Swift</option>
-            <option>Echo</option>
-            <option>Shell</option>
-        </select>
-    </div>
-    <!-- Original idea (easy multi-select picker); doesn't meet AC, so doing a text input and a file upload input
-    <label for="uniform-items">Choose Uniform Items Here (select more than one)</label>
-    <select name="uniform-items" class="form-control" multiple>
-        <option>Casual Practice Gear</option>
-        <option>Invincible Top</option>
-        <option>Fearless Top</option>
-        <option>Force Top</option>
-        <option>Swift Top</option>
-        <option>Echo Top</option>
-        <option>Shell Top</option>
-        <option>Odyssey Shrug</option>
-        <option>Odyssey Gauntlet Sleeves</option>
-        <option>Odyssey Spats</option>
-        <option>Invincible Skirt</option>
-        <option>Fearless Skirt</option>
-        <option>Force Skirt</option>
-        <option>Swift Skirt</option>
-        <option>Echo Skirt</option>
-        <option>Grand Skirt</option>
-        <option>Crossover Skirt</option>
-        <option>Glory Skirt</option>
-        <option>Arena Skirt</option>
-        <option>Gladiator Skirt</option>
-        <option>Nike Black Shoes</option>
-        <option>Reebok Blue Shoes</option>
-        <option>Asics Red Shoes</option>
-    </select>
-    -->
 </div>
