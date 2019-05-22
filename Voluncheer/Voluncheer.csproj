@@ -228,8 +228,6 @@
     <Content Include="Views\Volunteer\VolunteerList.cshtml" />
     <Content Include="Views\Home\DocumentRepository.cshtml" />
     <Content Include="Views\ApprovedFoods\Index.cshtml" />
-    <Content Include="Views\ApprovedFoods\AddItem.cshtml" />
-    <Content Include="Views\ApprovedFoods\AddCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
