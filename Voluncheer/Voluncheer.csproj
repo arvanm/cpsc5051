@@ -143,6 +143,7 @@
     <Content Include="Content\Img\Diamond.png" />
     <Content Include="Content\Img\Emerald.png" />
     <Content Include="Content\Img\Hotshot.jpg" />
+    <Content Include="Content\Img\docicon.png" />
     <Content Include="Content\Img\Superstar.jpg" />
     <Content Include="Content\Img\Warrior.png" />
     <Content Include="favicon.ico" />
@@ -154,6 +155,9 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\Documents\FieldTrip.doc" />
+    <Content Include="Content\Documents\physical exam.pdf" />
+    <Content Include="Content\Documents\absence_request.pdf" />
     <None Include="Properties\PublishProfiles\VolunCheer - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Voluncheer20190514083013 - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
