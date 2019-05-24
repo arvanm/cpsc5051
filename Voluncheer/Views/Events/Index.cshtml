@@ -4,28 +4,24 @@
 }
 
 <h2>Events</h2>
-<br>
-<p>
-    <div>
-        <button class="btn btn-success" type="button" onclick="window.location.href = '/Events/Create'"> + New Event</button>
-    </div>
-    <!-- You can't see me! -->
-</p>
-<br>
 <div class="container">
     <div class="row">
-        <div class="well">
-            <h3>Event 1</h3>
-            <div>
-                <a class="btn btn-link" role="button">@Html.ActionLink("Event Details", "Details")</a>
-                <br/>
-                <a class="btn btn-link" role="button">@Html.ActionLink("Outfits", "Index","Outfits")</a>
-            </div>
+        <div class="col">
+            @Html.ActionLink("+ New Event", "Create", "Events", null, new { @class = "btn btn-success" })
         </div>
     </div>
     <div class="row">
-        <div class="well">
-            <h3>Event 2</h3>
+        <div class="card card-body bg-light">
+            <h3>@Html.ActionLink("Competition", "Details", "Events", null, new { @class = "" })</h3>
+            <p>Location</p>
+            <p>Date</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card card-body bg-light">
+            <h3>@Html.ActionLink("Practice", "Details", null, new { @class = "" })</h3>
+            <p>Location</p>
+            <p>Date</p>
         </div>
     </div>
 </div>
