@@ -144,6 +144,7 @@
     <Content Include="Content\Img\Emerald.png" />
     <Content Include="Content\Img\Hotshot.jpg" />
     <Content Include="Content\Img\docicon.png" />
+    <Content Include="Content\Img\ProfileIcon.png" />
     <Content Include="Content\Img\Superstar.jpg" />
     <Content Include="Content\Img\Warrior.png" />
     <Content Include="favicon.ico" />
