@@ -233,6 +233,7 @@
     <Content Include="Views\Home\DocumentRepository.cshtml" />
     <Content Include="Views\ApprovedFoods\Index.cshtml" />
     <Content Include="Views\Chat\Dialog.cshtml" />
+    <Content Include="Views\Volunteer\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
