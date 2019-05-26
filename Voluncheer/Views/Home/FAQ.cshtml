@@ -9,10 +9,11 @@
         <div class="card card-body bg-light">
             <h5>Will food be provided for the team?</h5>
             <p>
-                Snacks and meals will be provided at some practices and 
-                competitions. For other events, the teammates will be required 
-                to bring their own food/money. To view event specific 
-                information, please refer to the Events Page.
+                Snacks and meals will be provided at some practices and
+                competitions. For other events, the teammates will be required
+                to bring their own food/money. To view event specific
+                information, please refer to the 
+                @Html.ActionLink("Events Page", "Index", "Events").
             </p>
         </div>
     </div>
@@ -20,9 +21,10 @@
         <div class="card card-body bg-light">
             <h5>How do I know which outfit is which?</h5>
             <p>
-                Clicking on the name of an outfit from the event details page 
-                will take you to an image of that outfit. All of the outfits 
-                and there names can be viewed here.
+                Clicking on the name of an outfit from the event details page
+                will take you to an image of that outfit. All of the outfits
+                and there names can be viewed 
+                @Html.ActionLink("here", "Index", "Outfits").
             </p>
         </div>
     </div>
@@ -30,10 +32,11 @@
         <div class="card card-body bg-light">
             <h5>Where can I find contact information for the other parent volunteers?</h5>
             <p>
-                Phone numbers and email addresses for each volunteer can be 
-                found here if the volunteer chose to make that information 
-                public. Otherwise, they may be contacted using VolunCheer's 
-                Chat service.
+                Phone numbers and email addresses for each volunteer can be
+                found @Html.ActionLink("here", "Index", "Volunteer") if the
+                volunteer chose to make that information public. Otherwise, 
+                they may be contacted using VolunCheer's
+                @Html.ActionLink("Chat", "Index", "Chat") service.
             </p>
         </div>
     </div>
@@ -41,10 +44,11 @@
         <div class="card card-body bg-light">
             <h5>How do I know what my responsibilities are as a volunteer?</h5>
             <p>
-                You will review alert notifications via text/email according 
-                to your preferences whenever as task is assigned to you. All 
-                of your currently assigned tasks can be viewed by clicking 
-                Dashboard on the menu bar.
+                You will receive alert notifications via text/email according
+                to your preferences whenever as task is assigned to you. All
+                of your currently assigned tasks can be viewed by clicking
+                @Html.ActionLink("Dashboard", "Index", "Dashboard") on the 
+                menu bar.
             </p>
         </div>
     </div>
