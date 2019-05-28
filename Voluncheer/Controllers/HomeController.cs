@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 
 namespace Voluncheer.Controllers
 {
@@ -19,6 +20,12 @@ namespace Voluncheer.Controllers
             return View();
         }
 
+        //public ActionResult Document(string name)
+        //{
+        //    string mimeType = MimeMapping.GetMimeMapping(name);
+            
+        //}
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
