@@ -120,6 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Backend\IVolunteerRepository.cs" />
+    <Compile Include="Backend\VolunteerRepositoryMock.cs" />
     <Compile Include="Controllers\ApprovedFoodsController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
