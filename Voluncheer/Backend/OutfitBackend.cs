@@ -6,16 +6,16 @@ using Voluncheer.Models;
 
 namespace Voluncheer.Backend
 {
-        public class EventBackend
+        public class OutfitBackend
         {
 
             #region SingletonPattern
-            private static volatile EventBackend instance;
+            private static volatile OutfitBackend instance;
             private static object syncRoot = new object();
 
-            private EventBackend() { }
+            private OutfitBackend() { }
 
-            public static EventBackend Instance
+            public static OutfitBackend Instance
             {
                 get
                 {
@@ -24,7 +24,7 @@ namespace Voluncheer.Backend
                         lock (syncRoot)
                         {
                             if (instance == null)
-                                instance = new EventBackend();
+                                instance = new OutfitBackend();
                         }
                     }
 
@@ -81,7 +81,7 @@ namespace Voluncheer.Backend
             }
 
             /// <summary>
-            ///  Returns the List of Events
+            ///  Returns the List of Outfits
             /// </summary>
             /// <returns></returns>
             public OutfitViewModel Index()
