@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Backend\IOutfitRepository.cs" />
     <Compile Include="Backend\IVolunteerRepository.cs" />
+    <Compile Include="Backend\OutfitRepositoryMock.cs" />
     <Compile Include="Backend\VolunteerRepositoryMock.cs" />
     <Compile Include="Controllers\ApprovedFoodsController.cs" />
     <Compile Include="Controllers\ChatController.cs" />

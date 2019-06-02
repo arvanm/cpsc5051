@@ -9,5 +9,10 @@ namespace Voluncheer.Models
     {
         public string OutfitName { get; set; }
         public string ImagePath { get; set; }
+
+        public void Update (OutfitModel data)
+        {
+            ImagePath = data.ImagePath;
+        }
     }
 }
