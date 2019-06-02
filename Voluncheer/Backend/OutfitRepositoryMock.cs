@@ -10,6 +10,11 @@ namespace Voluncheer.Backend
     {
         public List<OutfitModel> dataset = new List<OutfitModel>();
 
+        public OutfitRepositoryMock()
+        {
+            Initialize();
+        }
+
         public OutfitModel Create(OutfitModel data)
         {
             dataset.Add(data);

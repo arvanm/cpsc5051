@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Voluncheer.Models;
+using Voluncheer.Backend;
 
 namespace Voluncheer.Controllers
 {
@@ -12,8 +13,8 @@ namespace Voluncheer.Controllers
         // GET: Outfits
         public ActionResult Index()
         {
-            OutfitViewModel dataset = new OutfitViewModel();
-            return View(dataset);
+            var model = OutfitBackend.Instance.Index();
+            return View(model);
         }
     }
 }
