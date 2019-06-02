@@ -16,5 +16,11 @@ namespace Voluncheer.Controllers
             var model = OutfitBackend.Instance.Index();
             return View(model);
         }
+
+        public ActionResult Read(string outfitName)
+        {
+            var outfit = OutfitBackend.Instance.Read(outfitName);
+            return View(outfit);
+        }
     }
 }

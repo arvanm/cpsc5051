@@ -246,7 +246,7 @@
     <Content Include="Views\Volunteer\Profile.cshtml" />
     <Content Include="Views\Volunteer\UserProfile.cshtml" />
     <Content Include="Views\Chat\ChatPanel.cshtml" />
-    <Content Include="Views\Outfits\Outfit.cshtml" />
+    <Content Include="Views\Outfits\Read.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

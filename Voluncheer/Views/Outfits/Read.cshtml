@@ -1,0 +1,11 @@
+﻿@using Voluncheer.Models;
+@model OutfitModel
+
+@{
+    ViewBag.Title = "Outfit";
+}
+
+<h2>@Html.DisplayNameFor(m => m.OutfitName)</h2>
+<div>
+    <img src="@Url.Content(@Model.ImagePath)"/>
+</div>
