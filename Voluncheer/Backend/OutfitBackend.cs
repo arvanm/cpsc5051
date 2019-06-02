@@ -52,9 +52,9 @@ namespace Voluncheer.Backend
             /// </summary>
             /// <param name="id"></param>
             /// <returns></returns>
-            public OutfitModel Read(string id)
+            public OutfitModel Read(string outfitName)
             {
-                var myData = repository.Read(id);
+                var myData = repository.Read(outfitName);
                 return myData;
             }
 
