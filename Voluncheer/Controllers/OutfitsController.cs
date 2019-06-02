@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Voluncheer.Models;
 
 namespace Voluncheer.Controllers
 {
@@ -11,7 +12,8 @@ namespace Voluncheer.Controllers
         // GET: Outfits
         public ActionResult Index()
         {
-            return View();
+            OutfitViewModel dataset = new OutfitViewModel();
+            return View(dataset);
         }
     }
 }
