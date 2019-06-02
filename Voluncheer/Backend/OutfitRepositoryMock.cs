@@ -51,6 +51,9 @@ namespace Voluncheer.Backend
             return data;
         }
 
-
+        public void Initialize()
+        {
+            // TODO: Populated some Volunteer Data here...
+        }
     }
 }
