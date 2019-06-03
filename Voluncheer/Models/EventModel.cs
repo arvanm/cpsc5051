@@ -18,17 +18,6 @@ namespace Voluncheer.Models
         Practice, Competition, TeamBuilding
     }
 
-    public class SquadOutfit
-    {
-        public SquadOutfit(string Squad, string Outfit)
-        {
-            this.Squad = Squad;
-            this.Outfit = Outfit;
-        }
-        public string Squad { get; set; }
-        public string Outfit { get; set; }
-    }
-
     public class FoodAssignment
     {
         public FoodAssignment(string VolunteerName, string Category)

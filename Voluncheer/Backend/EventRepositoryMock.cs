@@ -66,6 +66,7 @@ namespace Voluncheer.Backend
                 BusInfo = BusAvailability.Not_Available,
                 Squad1 = Squad.Blue,
                 Squad2 = Squad.Green,
+                
 
             });
 
