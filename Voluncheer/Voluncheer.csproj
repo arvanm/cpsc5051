@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Backend\EventBackend.cs" />
     <Compile Include="Backend\EventRepositoryMock.cs" />
     <Compile Include="Backend\IEventRepository.cs" />
     <Compile Include="Backend\IOutfitRepository.cs" />
@@ -139,6 +140,7 @@
     </Compile>
     <Compile Include="Models\ChatConversationModel.cs" />
     <Compile Include="Models\EventModel.cs" />
+    <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\OutfitModel.cs" />
     <Compile Include="Models\OutfitViewModel.cs" />
     <Compile Include="Models\VolunteerModel.cs" />

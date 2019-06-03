@@ -40,7 +40,6 @@ namespace Voluncheer.Backend
 
         public OutfitModel Read(string id)
         {
-
             var myData = dataset.First(m => m.OutfitName == id);
             return myData;
         }
@@ -60,7 +59,7 @@ namespace Voluncheer.Backend
         public void Initialize()
         {
             dataset.Add(new OutfitModel {OutfitName = "Battle", ImagePath = "~/Content/Img/Battle.png" });
-            // TODO: Populated some Volunteer Data here...
+            // TODO: Populated some Outfit Data here...
         }
     }
 }

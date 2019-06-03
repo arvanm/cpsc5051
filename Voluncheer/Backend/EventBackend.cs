@@ -6,16 +6,16 @@ using Voluncheer.Models;
 
 namespace Voluncheer.Backend
 {
-    public class OutfitBackend
+    public class EventBackend
     {
 
         #region SingletonPattern
-        private static volatile OutfitBackend instance;
+        private static volatile EventBackend instance;
         private static object syncRoot = new object();
 
-        private OutfitBackend() { }
+        private EventBackend() { }
 
-        public static OutfitBackend Instance
+        public static EventBackend Instance
         {
             get
             {
@@ -24,7 +24,7 @@ namespace Voluncheer.Backend
                     lock (syncRoot)
                     {
                         if (instance == null)
-                            instance = new OutfitBackend();
+                            instance = new EventBackend();
                     }
                 }
 
@@ -33,15 +33,15 @@ namespace Voluncheer.Backend
         }
         #endregion SingletonPattern
 
-        // Hook up the Repositry
-        private IOutfitRepository repository = new OutfitRepositoryMock();
+        // Hook up the Repository
+        private IEventRepository repository = new EventRepositoryMock();
 
         /// <summary>
         /// Create
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public OutfitModel Create(OutfitModel data)
+        public EventModel Create(EventModel data)
         {
             var myData = repository.Create(data);
             return myData;
@@ -52,9 +52,9 @@ namespace Voluncheer.Backend
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public OutfitModel Read(string outfitName)
+        public EventModel Read(string id)
         {
-            var myData = repository.Read(outfitName);
+            var myData = repository.Read(id);
             return myData;
         }
 
@@ -63,7 +63,7 @@ namespace Voluncheer.Backend
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public OutfitModel Update(OutfitModel data)
+        public EventModel Update(EventModel data)
         {
             var myData = repository.Update(data);
             return myData;
@@ -84,10 +84,10 @@ namespace Voluncheer.Backend
         ///  Returns the List of Outfits
         /// </summary>
         /// <returns></returns>
-        public OutfitViewModel Index()
+        public EventViewModel Index()
         {
-            var myData = new OutfitViewModel();
-            myData.OutfitList = repository.Index();
+            var myData = new EventViewModel();
+            myData.EventList = repository.Index();
 
             return myData;
         }
