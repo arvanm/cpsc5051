@@ -120,6 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Backend\EventBackend.cs" />
+    <Compile Include="Backend\EventRepositoryMock.cs" />
+    <Compile Include="Backend\IEventRepository.cs" />
     <Compile Include="Backend\IOutfitRepository.cs" />
     <Compile Include="Backend\IVolunteerRepository.cs" />
     <Compile Include="Backend\OutfitBackend.cs" />
@@ -136,6 +139,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChatConversationModel.cs" />
+    <Compile Include="Models\EventModel.cs" />
+    <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\OutfitModel.cs" />
     <Compile Include="Models\OutfitViewModel.cs" />
     <Compile Include="Models\VolunteerModel.cs" />
@@ -151,6 +156,7 @@
     <Content Include="Content\Img\Battle.png" />
     <Content Include="Content\Img\Diamond.png" />
     <Content Include="Content\Img\Emerald.png" />
+    <Content Include="Content\Img\HomeImage.jpg" />
     <Content Include="Content\Img\Hotshot.jpg" />
     <Content Include="Content\Img\docicon.png" />
     <Content Include="Content\Img\ProfileIcon.png" />
@@ -246,7 +252,7 @@
     <Content Include="Views\Volunteer\Profile.cshtml" />
     <Content Include="Views\Volunteer\UserProfile.cshtml" />
     <Content Include="Views\Chat\ChatPanel.cshtml" />
-    <Content Include="Views\Outfits\Outfit.cshtml" />
+    <Content Include="Views\Outfits\Read.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
