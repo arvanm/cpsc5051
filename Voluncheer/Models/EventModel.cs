@@ -64,8 +64,6 @@ namespace Voluncheer.Models
         public DateTime DateInfo { get; set; }
         public DateTime TimeInfo { get; set; }
         public BusAvailability BusInfo { get; set; } 
-        public Squad Squad1 { get; set; }
-        public Squad Squad2 { get; set; }
         /// <summary>
         /// dictionary mapping squads to their outfit name
         /// </summary>
@@ -81,8 +79,6 @@ namespace Voluncheer.Models
             DateInfo = data.DateInfo;
             TimeInfo = data.TimeInfo;
             BusInfo = data.BusInfo;
-            Squad1 = data.Squad1;
-            Squad2 = data.Squad2;
             Outfits = new Dictionary<string, string>(data.Outfits);
             FoodAssignments = new List<FoodAssignment>(data.FoodAssignments);
             CleanupAssignments = new List<string>(data.CleanupAssignments);

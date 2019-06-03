@@ -60,13 +60,31 @@ namespace Voluncheer.Backend
             dataset.Add(new EventModel
             {
                 Type = EventType.Practice,
+                Location = "South Shore High School",
+                DateInfo = DateTime.Parse("06/03/2019"),
+                TimeInfo = DateTime.Parse("4:00 PM"),
+                BusInfo = BusAvailability.Not_Available,
+                Outfits = {
+                    { "Purple", "HotShot" },
+                    { "Blue", "SuperStar" }
+                },
+                FoodAssignments =
+                {
+                    {"Snack", "Lohani Moana" }
+                }
+            });
+            dataset.Add(new EventModel
+            {
+                Type = EventType.Practice,
                 Location = "Sonora High School",
-                DateInfo = DateTime.Parse("06/05/2019 4:00 PM"),
+                DateInfo = DateTime.Parse("06/05/2019"),
+                TimeInfo = DateTime.Parse("4:00 PM"),
                 BusInfo = BusAvailability.Not_Available,
                 Outfits = {
                     { "Blue", "GlitterGlam" },
                     { "Green", "Warrior" }
-                }                
+                },
+              
             });
 
             dataset.Add(new EventModel
