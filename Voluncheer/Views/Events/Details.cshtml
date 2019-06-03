@@ -1,17 +1,13 @@
-﻿
+﻿@using Voluncheer.Models;
+@model EventModel
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Practice: Sonora High School</h2>
-<h5>Basic Details</h5>
-<h5><small>Type: Practice</small></h5>
-<h5><small>Date: 09/11/2019</small></h5>
-<h5><small>Time: 6 PM</small></h5/>
-<h5>
-    <small>Location: My High School </small>
-    <a class="btn btn-success btn-sm" href="https://goo.gl/maps/WTekfhdx4XB8Hwx69" role="button">Map</a>
-</h5>
+<h2>@Model.Type</h2>
+<h5>@@ @Model.Location <a class="btn btn-success btn-sm" href="https://goo.gl/maps/WTekfhdx4XB8Hwx69" role="button">Map</a></h5>
+<h5><small>Date: @Model.DateInfo.ToShortDateString()</small></h5>
+<h5><small>Time: @Model.DateInfo.ToShortTimeString()</small></h5/>
 <h5><small>Bus: Not provided</small></h5>
 
 <h5>Squad Outfits</h5>
