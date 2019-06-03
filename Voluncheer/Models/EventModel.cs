@@ -10,23 +10,8 @@ namespace Voluncheer.Models
     {
         Available, Not_Available
     }
-    public enum Squad
-    {
-         Blue, Green, Purple, Yellow
-    }
     public enum EventType {
         Practice, Competition, TeamBuilding
-    }
-
-    public class SquadOutfit
-    {
-        public SquadOutfit(string Squad, string Outfit)
-        {
-            this.Squad = Squad;
-            this.Outfit = Outfit;
-        }
-        public string Squad { get; set; }
-        public string Outfit { get; set; }
     }
 
     public class FoodAssignment
@@ -72,11 +57,8 @@ namespace Voluncheer.Models
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public EventType Type { get; set; }
         public string Location { get; set; }
-        public DateTime DateInfo { get; set; }
-        public DateTime TimeInfo { get; set; }
+        public DateTime DateInfo { get; set; } = DateTime.Now;
         public BusAvailability BusInfo { get; set; } 
-        public Squad Squad1 { get; set; }
-        public Squad Squad2 { get; set; }
         /// <summary>
         /// dictionary mapping squads to their outfit name
         /// </summary>
@@ -90,10 +72,7 @@ namespace Voluncheer.Models
             Type = data.Type;
             Location = data.Location;
             DateInfo = data.DateInfo;
-            TimeInfo = data.TimeInfo;
             BusInfo = data.BusInfo;
-            Squad1 = data.Squad1;
-            Squad2 = data.Squad2;
             Outfits = new Dictionary<string, string>(data.Outfits);
             FoodAssignments = new List<FoodAssignment>(data.FoodAssignments);
             CleanupAssignments = new List<string>(data.CleanupAssignments);

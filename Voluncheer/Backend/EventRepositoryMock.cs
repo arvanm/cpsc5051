@@ -73,8 +73,7 @@ namespace Voluncheer.Backend
             {
                 Type = EventType.Competition,
                 Location = "Hollywood High School",
-                DateInfo = DateTime.Parse("06/18/2019"),
-                TimeInfo = DateTime.Parse("9:00 AM"),
+                DateInfo = DateTime.Parse("06/18/2019 9:00 AM"),
                 BusInfo = BusAvailability.Available,
                 Outfits =
                 {
