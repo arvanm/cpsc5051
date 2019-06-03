@@ -94,10 +94,11 @@ namespace Voluncheer.Backend
 
         public void Initialize()
         {
-            var jonSnow = new VolunteerModel
+            dataset.Add(new VolunteerModel
             {
                 FirstName = "Jon",
                 LastName = "Snow",
+                Phone = "(206) 555-1234",
                 DirectMessageHistory = new ChatConversationModel
                 {
                     Thread = {
@@ -105,8 +106,72 @@ namespace Voluncheer.Backend
                         new ChatPost("User", "Sup, Snow")
                     }
                 }
-            };
-            dataset.Add(jonSnow);
+            });
+            dataset.Add(new VolunteerModel
+            {
+                FirstName = "Hannah",
+                LastName = "Montana",
+                Phone = "(206) 555-2244",
+                DirectMessageHistory = new ChatConversationModel
+                {
+                    Thread = {
+                        new ChatPost("Hannah Montana", "Hi there"),
+                        new ChatPost("User", "Sup, Hannah")
+                    }
+                }
+            });
+            dataset.Add(new VolunteerModel
+            {
+                FirstName = "Lana",
+                LastName = "Lang",
+                Phone = "(206) 555-2444",
+                DirectMessageHistory = new ChatConversationModel
+                {
+                    Thread = {
+                        new ChatPost("Lana Lang", "Hi there"),
+                        new ChatPost("User", "Sup, Lang")
+                    }
+                }
+            });
+            dataset.Add(new VolunteerModel
+            {
+                FirstName = "Sally",
+                LastName = "Harrison",
+                Phone = "(206) 555-2457",
+                DirectMessageHistory = new ChatConversationModel
+                {
+                    Thread = {
+                        new ChatPost("Sally Harrison", "Hi there"),
+                        new ChatPost("User", "Sup, Sally")
+                    }
+                }
+            });
+            dataset.Add(new VolunteerModel
+            {
+                FirstName = "Tom",
+                LastName = "Ford",
+                Phone = "(206) 555-8151",
+                DirectMessageHistory = new ChatConversationModel
+                {
+                    Thread = {
+                        new ChatPost("Tom Ford", "Hi there"),
+                        new ChatPost("User", "Sup, Tom")
+                    }
+                }
+            });
+            dataset.Add(new VolunteerModel
+            {
+                FirstName = "Luna",
+                LastName = "Dooley",
+                Phone = "(206) 555-5151",
+                DirectMessageHistory = new ChatConversationModel
+                {
+                    Thread = {
+                        new ChatPost("Luna Dooley", "Hi there"),
+                        new ChatPost("User", "Sup, Dools")
+                    }
+                }
+            });
         }
     }
 }

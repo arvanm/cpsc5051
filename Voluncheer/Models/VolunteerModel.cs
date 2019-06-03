@@ -10,6 +10,7 @@ namespace Voluncheer.Models
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Phone { get; set; }
         public ChatConversationModel DirectMessageHistory { get; set; } = new ChatConversationModel();
         public string FullName() { return FirstName + " " + LastName; }
 
