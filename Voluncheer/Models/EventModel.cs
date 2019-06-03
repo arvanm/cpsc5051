@@ -52,7 +52,7 @@ namespace Voluncheer.Models
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public EventType Type { get; set; }
         public string Location { get; set; }
-        public DateTime DateInfo { get; set; }
+        public DateTime DateInfo { get; set; } = DateTime.Now;
         public Dictionary<string, OutfitModel> Outfits { get; set; } = new Dictionary<string, OutfitModel>();
         public List<FoodAssignment> FoodAssignments { get; set; } = new List<FoodAssignment>();
         public List<string> CleanupAssignments { get; set; } = new List<string>();

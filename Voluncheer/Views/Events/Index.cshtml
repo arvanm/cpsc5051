@@ -1,7 +1,6 @@
-﻿
-@{
-    ViewBag.Title = "Events";
-}
+﻿@using Voluncheer.Models
+@model EventViewModel
+@ViewBag.Title = "Events"
 
 <h2>Events</h2>
 <div class="container">
@@ -10,18 +9,16 @@
             @Html.ActionLink("+ New Event", "Create", "Events", null, new { @class = "btn btn-success" })
         </div>
     </div>
-    <div class="row">
-        <div class="card card-body bg-light">
-            <h3>@Html.ActionLink("Competition", "Details", "Events", null, new { @class = "" })</h3>
-            <p>Location</p>
-            <p>Date</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="card card-body bg-light">
-            <h3>@Html.ActionLink("Practice", "Details", null, new { @class = "" })</h3>
-            <p>Location</p>
-            <p>Date</p>
-        </div>
-    </div>
+    @{
+        foreach (var eventItem in Model.EventList)
+        {
+            <div class="row">
+                <div class="card card-body bg-light">
+                    <h3>@eventItem.Type</h3>
+                    <p>@eventItem.Location</p>
+                    <p>@eventItem.DateInfo.ToLongDateString()</p>
+                </div>
+            </div>
+        }
+    }
 </div>
