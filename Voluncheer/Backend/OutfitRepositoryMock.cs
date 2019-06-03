@@ -58,6 +58,7 @@ namespace Voluncheer.Backend
 
         public void Initialize()
         {
+            dataset.Add(new OutfitModel { OutfitName = "GlitterGlam", ImagePath = "~/Content/Img/glitterglam.png" });
             dataset.Add(new OutfitModel {OutfitName = "Battle", ImagePath = "~/Content/Img/Battle.png" });
             dataset.Add(new OutfitModel { OutfitName = "Warrior", ImagePath = "~/Content/Img/Warrior.png" });
             dataset.Add(new OutfitModel { OutfitName = "Diamond", ImagePath = "~/Content/Img/Diamond.png" });
