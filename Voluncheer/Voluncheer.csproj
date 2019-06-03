@@ -136,6 +136,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChatConversationModel.cs" />
+    <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\OutfitModel.cs" />
     <Compile Include="Models\OutfitViewModel.cs" />
     <Compile Include="Models\VolunteerModel.cs" />
