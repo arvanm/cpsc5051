@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Voluncheer.Backend;
 
 namespace Voluncheer.Controllers
 {
@@ -11,13 +12,20 @@ namespace Voluncheer.Controllers
         // GET: Events
         public ActionResult Index()
         {
-            return View();
+            var model = EventBackend.Instance.Index();
+            return View(model);
         }
 
         // GET: Event Details page
-        public ActionResult Details()
+        public ActionResult Details(string id = null)
         {
-            return View();
+            if (id == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var eventModel = EventBackend.Instance.Read(id);
+            return View(eventModel);
         }
 
         // GET: Create Event page

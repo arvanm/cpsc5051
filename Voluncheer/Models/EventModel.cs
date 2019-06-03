@@ -52,8 +52,11 @@ namespace Voluncheer.Models
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public EventType Type { get; set; }
         public string Location { get; set; }
-        public DateTime DateInfo { get; set; }
-        public Dictionary<string, OutfitModel> Outfits { get; set; } = new Dictionary<string, OutfitModel>();
+        public DateTime DateInfo { get; set; } = DateTime.Now;
+        /// <summary>
+        /// dictionary mapping squads to their outfit name
+        /// </summary>
+        public Dictionary<string, string> Outfits { get; set; } = new Dictionary<string, string>();
         public List<FoodAssignment> FoodAssignments { get; set; } = new List<FoodAssignment>();
         public List<string> CleanupAssignments { get; set; } = new List<string>();
         public List<GenericAssignment> OtherAssignments { get; set; } = new List<GenericAssignment>();
@@ -62,7 +65,7 @@ namespace Voluncheer.Models
             Type = data.Type;
             Location = data.Location;
             DateInfo = data.DateInfo;
-            Outfits = new Dictionary<string, OutfitModel>(data.Outfits);
+            Outfits = new Dictionary<string, string>(data.Outfits);
             FoodAssignments = new List<FoodAssignment>(data.FoodAssignments);
             CleanupAssignments = new List<string>(data.CleanupAssignments);
             OtherAssignments = new List<GenericAssignment>(data.OtherAssignments);
