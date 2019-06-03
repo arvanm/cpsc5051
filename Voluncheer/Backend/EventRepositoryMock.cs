@@ -76,9 +76,11 @@ namespace Voluncheer.Backend
                 DateInfo = DateTime.Parse("06/18/2019"),
                 TimeInfo = DateTime.Parse("9:00 AM"),
                 BusInfo = BusAvailability.Available,
-                Squad1 = Squad.Purple,
-                Squad2 = Squad.Yellow
-             
+                Outfits =
+                {
+                    {"Purple", "Diamond" },
+                    {"Yellow", "Emerald" }
+                }
             });
         }
     }
