@@ -57,7 +57,11 @@ namespace Voluncheer.Backend
 
         public void Initialize()
         {
-            // TODO: populate some Event Data here...
+            dataset.Add(new EventModel
+            {
+                Type = EventType.Practice,
+                Location = "Hollywood High"
+            });
         }
     }
 }
