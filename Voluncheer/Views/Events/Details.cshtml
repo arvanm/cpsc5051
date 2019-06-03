@@ -7,13 +7,18 @@
 <h2>@Model.Type</h2>
 <h5>@@ @Model.Location <a class="btn btn-success btn-sm" href="https://goo.gl/maps/WTekfhdx4XB8Hwx69" role="button">Map</a></h5>
 <h5><small>Date: @Model.DateInfo.ToShortDateString()</small></h5>
-<h5><small>Time: @Model.TimeInfo.ToShortTimeString()</small></h5/>
+<h5><small>Time: @Model.DateInfo.ToShortTimeString()</small></h5/>
 <h5><small>Bus: @Model.BusInfo</small></h5>
 
 <h5>Squad Outfits</h5>
-<label style="text-indent:20px">@Model.Squad1:  <text style="font-size:smaller"> @Html.ActionLink("See Outfit", "Read", "Outfits", new { id = "GlitterGlam" }, new { })</text></label><br>
-<label style="text-indent:20px">@Model.Squad2:  <text style="font-size:smaller">@Html.ActionLink("See Outfit", "Read", "Outfits", new { id = "Warrior" }, new { })</text></label>
-<br>
+@{ 
+    foreach (var outfitMapping in Model.Outfits)
+    {
+        var squad = outfitMapping.Key;
+        var outfitName = outfitMapping.Value;
+        <label style="text-indent:20px">@squad: @outfitName <text style="font-size:smaller"> @Html.ActionLink("See Outfit", "Read", "Outfits", new { id = outfitName }, new { })</text></label><br>
+    }
+}
 <p></p>
 
 <div class="row">
