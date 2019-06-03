@@ -19,6 +19,10 @@ namespace Voluncheer.Controllers
 
         public ActionResult Read(string id = null)
         {
+            if (id == null)
+            {
+                return RedirectToAction("Index");
+            }
             var outfit = OutfitBackend.Instance.Read(id);
             return View(outfit);
         }

@@ -60,7 +60,7 @@ namespace Voluncheer.Backend
             dataset.Add(new EventModel
             {
                 Type = EventType.Practice,
-                Location = "Hollywood High"
+                Location = "Sonora High School"
             });
         }
     }
