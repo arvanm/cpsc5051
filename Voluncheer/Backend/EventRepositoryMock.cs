@@ -60,45 +60,37 @@ namespace Voluncheer.Backend
             dataset.Add(new EventModel
             {
                 Type = EventType.Practice,
-                Location = "South Shore High School",
-                DateInfo = DateTime.Parse("06/03/2019"),
-                TimeInfo = DateTime.Parse("4:00 PM"),
-                BusInfo = BusAvailability.Not_Available,
-                Outfits = {
-                    { "Purple", "HotShot" },
-                    { "Blue", "SuperStar" }
-                },
-                FoodAssignments =
-                {
-                    {"Snack", "Lohani Moana" }
-                }
-            });
-            dataset.Add(new EventModel
-            {
-                Type = EventType.Practice,
                 Location = "Sonora High School",
-                DateInfo = DateTime.Parse("06/05/2019"),
-                TimeInfo = DateTime.Parse("4:00 PM"),
+                DateInfo = DateTime.Parse("06/05/2019 4:00 PM"),
                 BusInfo = BusAvailability.Not_Available,
                 Outfits = {
                     { "Blue", "GlitterGlam" },
                     { "Green", "Warrior" }
                 },
-              
+                FoodAssignments =
+                {
+                    new FoodAssignment("Stacy Harrison", "Snack", 10),
+                    new FoodAssignment("Tom Ford", "Drinks", 10)
+                }
             });
 
             dataset.Add(new EventModel
             {
                 Type = EventType.Competition,
                 Location = "Hollywood High School",
-                DateInfo = DateTime.Parse("06/18/2019"),
-                TimeInfo = DateTime.Parse("9:00 AM"),
+                DateInfo = DateTime.Parse("06/18/2019 9:00 AM"),
                 BusInfo = BusAvailability.Available,
                 Outfits =
                 {
                     {"Purple", "Diamond" },
                     {"Yellow", "Emerald" }
+                },
+                FoodAssignments =
+                {
+                    new FoodAssignment("Barry White", "Snack", 30),
+                    new FoodAssignment("Manu Ginobli", "Drinks", 35)
                 }
+
             });
         }
     }

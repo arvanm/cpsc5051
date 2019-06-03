@@ -10,26 +10,24 @@ namespace Voluncheer.Models
     {
         Available, Not_Available
     }
-    public enum Squad
-    {
-         Blue, Green, Purple, Yellow
-    }
     public enum EventType {
         Practice, Competition, TeamBuilding
     }
 
     public class FoodAssignment
     {
-        public FoodAssignment(string VolunteerName, string Category)
+        public FoodAssignment(string VolunteerName, string Category, int Quantity)
         {
             this.VolunteerName = VolunteerName;
             this.Category = Category;
+            this.Quantity = Quantity;
         }
 
         /// TODO make this a ref to a volunteer (populate from volunteer backend)
         public string VolunteerName { get; set; }
         /// TODO make a food category class with its own repository
         public string Category { get; set; }
+        public int Quantity { get; set; }
     }
 
     public class TransportationAssignment
@@ -61,8 +59,7 @@ namespace Voluncheer.Models
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public EventType Type { get; set; }
         public string Location { get; set; }
-        public DateTime DateInfo { get; set; }
-        public DateTime TimeInfo { get; set; }
+        public DateTime DateInfo { get; set; } = DateTime.Now;
         public BusAvailability BusInfo { get; set; } 
         /// <summary>
         /// dictionary mapping squads to their outfit name
@@ -77,7 +74,6 @@ namespace Voluncheer.Models
             Type = data.Type;
             Location = data.Location;
             DateInfo = data.DateInfo;
-            TimeInfo = data.TimeInfo;
             BusInfo = data.BusInfo;
             Outfits = new Dictionary<string, string>(data.Outfits);
             FoodAssignments = new List<FoodAssignment>(data.FoodAssignments);

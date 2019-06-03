@@ -20,7 +20,7 @@
             <h3>@Html.ActionLink(item.Type.ToString(), "Details", "Events", new { id = item.ID }, new object())</h3>
             <p>@item.Location</p>
             <p>@item.DateInfo.ToShortDateString()</p>
-            <p>@item.TimeInfo.ToShortTimeString()</p>
+            <p>@item.DateInfo.ToShortTimeString()</p>
         </div>
     </div>
         }
