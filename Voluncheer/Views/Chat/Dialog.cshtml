@@ -1,4 +1,5 @@
-﻿
+﻿@using Voluncheer.Models;
+@model ChatConversationModel
 @{
     ViewBag.Title = "ChatDialog";
 }
@@ -14,45 +15,14 @@
 <div class="row">
     <div class="col">
         <div id="chatbox" class="overflow-auto border">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis interdum magna, sit amet malesuada ante. Proin molestie nisl sit amet lectus porttitor, a pharetra metus sodales. Aliquam erat volutpat. In lacinia malesuada dui nec convallis. Suspendisse potenti. Integer eget massa fermentum, finibus massa ac, dignissim ex. Nunc lorem metus, maximus quis volutpat vel, vestibulum id nibh.
-            </p>
-
-            <p>
-                Nulla scelerisque sodales varius. Etiam enim risus, tincidunt a dictum vitae, consectetur feugiat nulla. In ac nisi quis magna congue feugiat eu non felis. Nulla a tellus ipsum. In vitae mauris sit amet nisl maximus vehicula. Fusce vel eros ullamcorper, elementum massa lacinia, commodo nisl. Nullam ipsum neque, ultricies ac justo eget, bibendum blandit nisl. Mauris consequat nulla quis sollicitudin auctor.
-            </p>
-
-            <p>
-                Mauris scelerisque lorem quis nulla volutpat, ac malesuada ante sagittis. Ut eu arcu dapibus, malesuada metus quis, ullamcorper ex. Etiam congue condimentum ultricies. Nullam a mauris interdum, gravida odio at, tempus diam. Curabitur ornare sollicitudin ex, sed vulputate metus aliquet et. In mollis condimentum ex, eget rutrum risus pretium vitae. Donec imperdiet eu mi et consectetur. Ut cursus tempus tortor, nec semper nisl commodo sit amet. Praesent vel cursus lorem, ut eleifend ex. Sed aliquet tristique odio, nec pellentesque elit suscipit a. Sed sem velit, volutpat non dolor porta, cursus faucibus massa. Pellentesque scelerisque lacus id posuere blandit. Nunc facilisis non velit et molestie. Donec malesuada, nunc id tincidunt congue, dolor eros ultricies enim, vel maximus risus quam vel lorem. Phasellus condimentum tristique tortor fermentum volutpat.
-            </p>
-            <p>
-                Nunc fringilla aliquam nisl vestibulum porttitor. Suspendisse potenti. In hac habitasse platea dictumst. In rhoncus iaculis risus vitae faucibus. Sed sit amet tempor tellus, nec viverra risus. Integer at eros purus. Donec dictum nunc vel venenatis tristique. Fusce ligula leo, tincidunt sit amet condimentum vel, elementum vitae ante. Pellentesque molestie dolor lectus, sed placerat est feugiat id. Suspendisse a nulla hendrerit, laoreet turpis ac, dictum urna. Morbi commodo feugiat ex at suscipit. Nunc aliquam mattis risus vitae mollis. Maecenas diam tortor, aliquet ac ultrices eu, dignissim vel metus.
-            </p>
-
-            <p>
-                Nunc scelerisque nisl in tincidunt scelerisque. Mauris convallis pellentesque nisl quis pellentesque. Vestibulum id imperdiet lacus. Nunc vel orci egestas, pulvinar urna sed, interdum nisl. Aliquam bibendum euismod ullamcorper. Mauris egestas quis lacus eget malesuada. Pellentesque sit amet porttitor dolor. Maecenas molestie tempor mi, placerat accumsan nunc tempor quis.
-            </p>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis interdum magna, sit amet malesuada ante. Proin molestie nisl sit amet lectus porttitor, a pharetra metus sodales. Aliquam erat volutpat. In lacinia malesuada dui nec convallis. Suspendisse potenti. Integer eget massa fermentum, finibus massa ac, dignissim ex. Nunc lorem metus, maximus quis volutpat vel, vestibulum id nibh.
-            </p>
-
-            <p>
-            Nulla scelerisque sodales varius. Etiam enim risus, tincidunt a dictum vitae, consectetur feugiat nulla. In ac nisi quis magna congue feugiat eu non felis. Nulla a tellus ipsum. In vitae mauris sit amet nisl maximus vehicula. Fusce vel eros ullamcorper, elementum massa lacinia, commodo nisl. Nullam ipsum neque, ultricies ac justo eget, bibendum blandit nisl. Mauris consequat nulla quis sollicitudin auctor.
-            </p>
-
-            <p>
-            Mauris scelerisque lorem quis nulla volutpat, ac malesuada ante sagittis. Ut eu arcu dapibus, malesuada metus quis, ullamcorper ex. Etiam congue condimentum ultricies. Nullam a mauris interdum, gravida odio at, tempus diam. Curabitur ornare sollicitudin ex, sed vulputate metus aliquet et. In mollis condimentum ex, eget rutrum risus pretium vitae. Donec imperdiet eu mi et consectetur. Ut cursus tempus tortor, nec semper nisl commodo sit amet. Praesent vel cursus lorem, ut eleifend ex. Sed aliquet tristique odio, nec pellentesque elit suscipit a. Sed sem velit, volutpat non dolor porta, cursus faucibus massa. Pellentesque scelerisque lacus id posuere blandit. Nunc facilisis non velit et molestie. Donec malesuada, nunc id tincidunt congue, dolor eros ultricies enim, vel maximus risus quam vel lorem. Phasellus condimentum tristique tortor fermentum volutpat.
-            </p>
-
-            <p>
-
-            Nunc fringilla aliquam nisl vestibulum porttitor. Suspendisse potenti. In hac habitasse platea dictumst. In rhoncus iaculis risus vitae faucibus. Sed sit amet tempor tellus, nec viverra risus. Integer at eros purus. Donec dictum nunc vel venenatis tristique. Fusce ligula leo, tincidunt sit amet condimentum vel, elementum vitae ante. Pellentesque molestie dolor lectus, sed placerat est feugiat id. Suspendisse a nulla hendrerit, laoreet turpis ac, dictum urna. Morbi commodo feugiat ex at suscipit. Nunc aliquam mattis risus vitae mollis. Maecenas diam tortor, aliquet ac ultrices eu, dignissim vel metus.
-            </p>
-
-            <p>
-
-            Nunc scelerisque nisl in tincidunt scelerisque. Mauris convallis pellentesque nisl quis pellentesque. Vestibulum id imperdiet lacus. Nunc vel orci egestas, pulvinar urna sed, interdum nisl. Aliquam bibendum euismod ullamcorper. Mauris egestas quis lacus eget malesuada. Pellentesque sit amet porttitor dolor. Maecenas molestie tempor mi, placerat accumsan nunc tempor quis.
-            </p>
+            @{ 
+                foreach (var message in Model.Thread)
+                {
+                    <p>
+                        <span class="text-primary">@message.UserName:</span> @message.Message
+                    </p>
+                }
+            }
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Voluncheer.Backend;
 
 namespace Voluncheer.Controllers
 {
@@ -15,9 +16,10 @@ namespace Voluncheer.Controllers
         }
 
         // GET: DirectMessage
-        public ActionResult DirectMessage()
+        public ActionResult DirectMessage(string id = null)
         {
-            return View();
+            var chatModel = VolunteerBackend.Instance.Read(id).DirectMessageHistory;
+            return View(chatModel);
         }
 
     }

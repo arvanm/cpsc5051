@@ -94,7 +94,19 @@ namespace Voluncheer.Backend
 
         public void Initialize()
         {
-            // TODO: Populated some Volunteer Data here...
+            var jonSnow = new VolunteerModel
+            {
+                FirstName = "Jon",
+                LastName = "Snow",
+                DirectMessageHistory = new ChatConversationModel
+                {
+                    Thread = {
+                        new ChatPost("Jon Snow", "Hi there"),
+                        new ChatPost("User", "Sup, Snow")
+                    }
+                }
+            };
+            dataset.Add(jonSnow);
         }
     }
 }

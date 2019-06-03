@@ -13,7 +13,12 @@ namespace Voluncheer.Models
 
     public class ChatPost
     {
-        public VolunteerModel User { get; set; }
+        public ChatPost(string UserName, string Message)
+        {
+            this.UserName = UserName;
+            this.Message = Message;
+        }
+        public string UserName { get; set; }
         public string Message { get; set; }
     }
 }

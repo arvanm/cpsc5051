@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Voluncheer.Backend;
 
 namespace Voluncheer.Controllers
 {
@@ -11,7 +12,8 @@ namespace Voluncheer.Controllers
         // GET: Volunteer
         public ActionResult Index()
         {
-            return View();
+            var model = VolunteerBackend.Instance.Index();
+            return View(model);
         }
 
         // GET: Volunteer Profile page
