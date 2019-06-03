@@ -17,9 +17,15 @@ namespace Voluncheer.Controllers
         }
 
         // GET: Event Details page
-        public ActionResult Details()
+        public ActionResult Details(string id = null)
         {
-            return View();
+            if (id == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var eventModel = EventBackend.Instance.Read(id);
+            return View(eventModel);
         }
 
         // GET: Create Event page
