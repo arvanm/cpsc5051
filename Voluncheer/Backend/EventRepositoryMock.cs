@@ -60,7 +60,25 @@ namespace Voluncheer.Backend
             dataset.Add(new EventModel
             {
                 Type = EventType.Practice,
-                Location = "Sonora High School"
+                Location = "Sonora High School",
+                DateInfo = DateTime.Parse("06/05/2019"),
+                TimeInfo = DateTime.Parse("4:00 PM"),
+                BusInfo = BusAvailability.Not_Available,
+                Squad1 = Squad.Blue,
+                Squad2 = Squad.Green,
+
+            });
+
+            dataset.Add(new EventModel
+            {
+                Type = EventType.Competition,
+                Location = "Hollywood High School",
+                DateInfo = DateTime.Parse("06/18/2019"),
+                TimeInfo = DateTime.Parse("9:00 AM"),
+                BusInfo = BusAvailability.Available,
+                Squad1 = Squad.Purple,
+                Squad2 = Squad.Yellow
+             
             });
         }
     }
