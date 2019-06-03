@@ -127,6 +127,7 @@
     <Compile Include="Backend\IVolunteerRepository.cs" />
     <Compile Include="Backend\OutfitBackend.cs" />
     <Compile Include="Backend\OutfitRepositoryMock.cs" />
+    <Compile Include="Backend\VolunteerBackend.cs" />
     <Compile Include="Backend\VolunteerRepositoryMock.cs" />
     <Compile Include="Controllers\ApprovedFoodsController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Models\OutfitModel.cs" />
     <Compile Include="Models\OutfitViewModel.cs" />
     <Compile Include="Models\VolunteerModel.cs" />
+    <Compile Include="Models\VolunteerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
