@@ -16,16 +16,18 @@ namespace Voluncheer.Models
 
     public class FoodAssignment
     {
-        public FoodAssignment(string VolunteerName, string Category)
+        public FoodAssignment(string VolunteerName, string Category, int Quantity)
         {
             this.VolunteerName = VolunteerName;
             this.Category = Category;
+            this.Quantity = Quantity;
         }
 
         /// TODO make this a ref to a volunteer (populate from volunteer backend)
         public string VolunteerName { get; set; }
         /// TODO make a food category class with its own repository
         public string Category { get; set; }
+        public int Quantity { get; set; }
     }
 
     public class TransportationAssignment

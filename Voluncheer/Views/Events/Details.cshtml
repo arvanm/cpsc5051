@@ -38,22 +38,20 @@
                 </tr>
             </thead>
             <tbody>
+                @{ 
+                    foreach (var assn in Model.FoodAssignments)
+                    {
+
                 <tr>
-                    <td>Snack</td>
-                    <td>Stacy Harrison</td>
+                    <td>@assn.Category</td>
+                    <td>@assn.VolunteerName</td>
                     <td>
                         <p>Quantity: 10  </p>
                         <a class="btn btn-link" role="button">@Html.ActionLink("Food List", "Index", "ApprovedFoods")</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>Drinks</td>
-                    <td>Tom Ford</td>
-                    <td>
-                        <p>Quantity: 10  </p>
-                        <a class="btn btn-link" role="button">@Html.ActionLink("Food List", "Index", "ApprovedFoods")</a>
-                    </td>
-                </tr>
+                    }
+                }
             </tbody>
         </table>
     </div>

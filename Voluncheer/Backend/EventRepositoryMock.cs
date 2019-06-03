@@ -66,7 +66,12 @@ namespace Voluncheer.Backend
                 Outfits = {
                     { "Blue", "GlitterGlam" },
                     { "Green", "Warrior" }
-                }                
+                },
+                FoodAssignments =
+                {
+                    new FoodAssignment("Stacy Harrison", "Snack", 10),
+                    new FoodAssignment("Tom Ford", "Drinks", 10)
+                }
             });
 
             dataset.Add(new EventModel
@@ -79,7 +84,13 @@ namespace Voluncheer.Backend
                 {
                     {"Purple", "Diamond" },
                     {"Yellow", "Emerald" }
+                },
+                FoodAssignments =
+                {
+                    new FoodAssignment("Barry White", "Snack", 30),
+                    new FoodAssignment("Manu Ginobli", "Drinks", 35)
                 }
+
             });
         }
     }
