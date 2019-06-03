@@ -156,6 +156,7 @@
     <Content Include="Content\Img\Battle.png" />
     <Content Include="Content\Img\Diamond.png" />
     <Content Include="Content\Img\Emerald.png" />
+    <Content Include="Content\Img\glitterglam.png" />
     <Content Include="Content\Img\HomeImage.jpg" />
     <Content Include="Content\Img\Hotshot.jpg" />
     <Content Include="Content\Img\docicon.png" />
