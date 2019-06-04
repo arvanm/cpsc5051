@@ -40,7 +40,17 @@
     </div>
 </div>
 <script type="text/javascript">
-    var chatbox, messagebox;
+    var chatbox, messagebox, currentResponse = 0;
+
+    var responses = [
+        'Absolutely!',
+        'No problem! I can definitely help with that!',
+        'Sure!',
+        'Great!',
+        'Alright!',
+        "I'll do anything!",
+        "Yep! I'll see you there!"
+    ];
 
     window.onload = function () {
         chatbox = document.getElementById('chatbox');
@@ -56,5 +66,16 @@
         `;
         chatbox.innerHTML += messageMarkup;
         messagebox.value = '';
+
+        var responseText = responses[currentResponse];
+        currentResponse = (currentResponse + 1) % responses.length;
+        var responseMarkup = `
+        <p>
+             <span class="text-primary">Jon Snow:</span> ${responseText}
+        </p>`
+
+        setTimeout(function () {
+            chatbox.innerHTML += responseMarkup;
+        }, 500);
     }
 </script>
