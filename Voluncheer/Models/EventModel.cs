@@ -30,6 +30,17 @@ namespace Voluncheer.Models
         public int Quantity { get; set; }
     }
 
+    public class CleanupAssignment
+    {
+        public CleanupAssignment(string VolunteerName)
+        {
+            this.VolunteerName = VolunteerName;
+        }
+
+        /// TODO use Volunteer model
+        public string VolunteerName { get; set; }
+    }
+
     public class TransportationAssignment
     {
         public TransportationAssignment(string VolunteerName, int Seats)
@@ -66,7 +77,8 @@ namespace Voluncheer.Models
         /// </summary>
         public Dictionary<string, string> Outfits { get; set; } = new Dictionary<string, string>();
         public List<FoodAssignment> FoodAssignments { get; set; } = new List<FoodAssignment>();
-        public List<string> CleanupAssignments { get; set; } = new List<string>();
+        public List<CleanupAssignment> CleanupAssignments { get; set; } = new List<CleanupAssignment>();
+        public List<TransportationAssignment> TransportationAssignments { get; set; } = new List<TransportationAssignment>();
         public List<GenericAssignment> OtherAssignments { get; set; } = new List<GenericAssignment>();
    
         public void Update(EventModel data)
@@ -77,7 +89,8 @@ namespace Voluncheer.Models
             BusInfo = data.BusInfo;
             Outfits = new Dictionary<string, string>(data.Outfits);
             FoodAssignments = new List<FoodAssignment>(data.FoodAssignments);
-            CleanupAssignments = new List<string>(data.CleanupAssignments);
+            CleanupAssignments = new List<CleanupAssignment>(data.CleanupAssignments);
+            TransportationAssignments = new List<TransportationAssignment>(data.TransportationAssignments);
             OtherAssignments = new List<GenericAssignment>(data.OtherAssignments);
         }
     }

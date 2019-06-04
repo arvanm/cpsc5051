@@ -68,15 +68,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Jon Snow</td>
-                </tr>
-                <tr>
-                    <td>Hannah Montana</td>
-                </tr>
-                <tr>
-                    <td>Lana Lang</td>
-                </tr>
+
+                @{
+                    foreach (var assn in Model.CleanupAssignments)
+                    {
+
+                        <tr>
+                            <td>@assn.VolunteerName</td>
+                          
+                        </tr>
+                    }
+                }
 
             </tbody>
         </table>
@@ -95,18 +97,18 @@
                 </tr>
             </thead>
             <tbody>
+
+                @{
+                    foreach (var assn in Model.TransportationAssignments)
+                    {
+
                 <tr>
-                    <td>James Jonah</td>
-                    <td>6</td>
+                    <td>@assn.VolunteerName</td>
+                    <td>@assn.Seats</td>
+
                 </tr>
-                <tr>
-                    <td>Harry Willis</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>Phillip Carl</td>
-                    <td>4</td>
-                </tr>
+                    }
+                }
 
             </tbody>
         </table>
@@ -124,18 +126,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Jamie Curtis</td>
-                    <td>Pass out team gear to parents</td>
-                </tr>
-                <tr>
-                    <td>Joan Ucoll</td>
-                    <td>Gather parents to rally for athletes</td>
-                </tr>
-                <tr>
-                    <td>Shane Cahoun</td>
-                    <td>Take attendance of parents</td>
-                </tr>
+                @{
+                    foreach (var assn in Model.OtherAssignments)
+                    {
+
+                        <tr>
+                            <td>@assn.Name</td>
+                            <td>@assn.Duty</td>
+
+                        </tr>
+                    }
+                }
 
             </tbody>
         </table>
