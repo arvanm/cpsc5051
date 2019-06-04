@@ -34,8 +34,27 @@
             </div>
             <input id="messagebox" type="text" class="form-control" placeholder="Type your message" area-label="Message" aria-describedby="message-prepend">
             <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Send</button>
+                <button class="btn btn-outline-success" type="button" onclick="sendMessage()">Send</button>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    var chatbox, messagebox;
+
+    window.onload = function () {
+        chatbox = document.getElementById('chatbox');
+        messagebox = document.getElementById('messagebox');
+    };
+
+    function sendMessage() {
+        var messageText = messagebox.value;
+        var messageMarkup = `
+        <p>
+             <span class="text-primary">User:</span> ${messageText}
+        </p>
+        `;
+        chatbox.innerHTML += messageMarkup;
+        messagebox.value = '';
+    }
+</script>
