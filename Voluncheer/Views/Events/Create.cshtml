@@ -7,17 +7,15 @@
     var outfits = OutfitBackend.Instance.Index();
 }
 <h2>Create a New Event</h2>
-@using (Html.BeginForm(FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
+
         <div class="row">
             <div class="col-md-6">
                 <!-- basic details section -->
                 <h3>Basic Details</h3>
                 <div id="basic-details" class="container border">
                     <div class="form-group">
-                        <label for="location">@Html.DisplayNameFor(m => m.Location):</label>
-                        @Html.EditorFor(m => m.Location)
+                        <label for="Location">@Html.DisplayNameFor(m => m.Location):</label>
+                        <input name="Location" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="location-map">Link to Map (optional):</label>
@@ -156,7 +154,7 @@
                         </select>
                     </li>
                     <li class="list-group-item">
-                        <button class="btn btn-success">
+                        <button type="button" class="btn btn-success">
                             + Add
                         </button>
                     </li>
@@ -194,7 +192,7 @@
                         </select>
                     </li>
                     <li class="list-group-item">
-                        <button class="btn btn-success">
+                        <button type="button" class="btn btn-success">
                             + Add
                         </button>
                     </li>
@@ -232,7 +230,7 @@
                         </select>
                     </li>
                     <li class="list-group-item">
-                        <button class="btn btn-success">
+                        <button type="button" class="btn btn-success">
                             + Add
                         </button>
                     </li>
@@ -240,4 +238,6 @@
             </div>
         </div>
 
-}
+        <div class="row">
+            @Html.ActionLink("Create", "Created", "Events", new { @class = "btn btn-success" })
+        </div>

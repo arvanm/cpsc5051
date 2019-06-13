@@ -257,6 +257,7 @@
     <Content Include="Views\Chat\ChatPanel.cshtml" />
     <Content Include="Views\Outfits\Read.cshtml" />
     <Content Include="Views\Chat\DirectMessage.cshtml" />
+    <Content Include="Views\Events\Created.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

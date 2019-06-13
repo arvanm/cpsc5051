@@ -33,5 +33,11 @@ namespace Voluncheer.Controllers
         {
             return View();
         }
+
+        // GET: Create Event page
+        public ActionResult Created()
+        {
+            return View();
+        }
     }
 }
