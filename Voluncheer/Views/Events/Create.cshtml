@@ -1,8 +1,10 @@
 ﻿@using Voluncheer.Models;
+@using Voluncheer.Backend;
 @model EventModel
 
 @{
     ViewBag.Title = "Create";
+    var outfits = OutfitBackend.Instance.Index();
 }
 <h2>Create a New Event</h2>
 @using (Html.BeginForm(FormMethod.Post))
@@ -27,43 +29,45 @@
                     </div>
                     <div class="form-group">
                         <label for="event-type">Event Type:</label>
-                        @Html.EditorFor(m => m.Type)
+                        <select name="Type" id="Type" class="form-control">
+                            @{ 
+                                foreach (var type in Enum.GetValues(typeof(EventType)))
+                                {
+                                    <option value="@type">@type</option>
+                                }
+                            }
+                        </select>
                     </div>
                 </div>
                 <!-- uniform picker -->
                 <h3>Uniform Components</h3>
                 <div id="uniform-components" class="container border">
-                    <div class="form-group">
-                        <label for="uniform">Uniform name:</label>
-                        @Html.EditorFor(m => m.Outfits)
+                    <script type="text/javascript">
+                        function onSquadNameEdited(squadInput) {
+                            let squadGrandparent = squadInput.parentElement.parentElement;
+                            let outfitInput = squadGrandparent.getElementsByClassName('outfit')[0];
+                            outfitInput.name = `Outfits[${squadInput.value}]`;
+                        }
+                    </script>
+                    <div id="uniforms-group">
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Squad:</label>
+                                <input class="squad form-control" type="text" onblur="onSquadNameEdited(this);"/>
+                            </div>
+                            <div class="form-group col">
+                                <label>Outfit:</label>
+                                <select class="outfit form-control">
+                                    @{ 
+                                        foreach(var outfit in outfits.OutfitList)
+                                        {
+                                            <option value="@outfit.OutfitName">@outfit.OutfitName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Original idea (easy multi-select picker); doesn't meet AC, so doing a text input and a file upload input
-                    <label for="uniform-items">Choose Uniform Items Here (select more than one)</label>
-                    <select name="uniform-items" class="form-control" multiple>
-                        <option>Casual Practice Gear</option>
-                        <option>Invincible Top</option>
-                        <option>Fearless Top</option>
-                        <option>Force Top</option>
-                        <option>Swift Top</option>
-                        <option>Echo Top</option>
-                        <option>Odyssey Shrug</option>
-                        <option>Odyssey Gauntlet Sleeves</option>
-                        <option>Odyssey Spats</option>
-                        <option>Invincible Skirt</option>
-                        <option>Fearless Skirt</option>
-                        <option>Force Skirt</option>
-                        <option>Swift Skirt</option>
-                        <option>Echo Skirt</option>
-                        <option>Grand Skirt</option>
-                        <option>Crossover Skirt</option>
-                        <option>Glory Skirt</option>
-                        <option>Arena Skirt</option>
-                        <option>Gladiator Skirt</option>
-                        <option>Nike Black Shoes</option>
-                        <option>Reebok Blue Shoes</option>
-                        <option>Asics Red Shoes</option>
-                    </select>
-                    -->
                 </div>
             </div>
             <div class="col-md-6">
