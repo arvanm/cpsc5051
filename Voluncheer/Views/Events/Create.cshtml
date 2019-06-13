@@ -43,29 +43,58 @@
                 <h3>Uniform Components</h3>
                 <div id="uniform-components" class="container border">
                     <script type="text/javascript">
+                        const UNIFORM_DIV_ID = 'uniforms-group';
+                        const OUTFIT_INPUT_TEMPLATE = `
+<div class="row">
+    <div class="form-group col">
+        <label>Squad:</label>
+        <input class="squad form-control" type="text" onblur="onSquadNameEdited(this);"/>
+    </div>
+    <div class="form-group col">
+        <label>Outfit:</label>
+        <select class="outfit form-control">
+            @{ 
+                foreach(var outfit in outfits.OutfitList)
+                {
+                    <option value="@outfit.OutfitName">@outfit.OutfitName</option>
+                }
+            }
+        </select>
+    </div>
+</div>`;
                         function onSquadNameEdited(squadInput) {
                             let squadGrandparent = squadInput.parentElement.parentElement;
                             let outfitInput = squadGrandparent.getElementsByClassName('outfit')[0];
                             outfitInput.name = `Outfits[${squadInput.value}]`;
+                        }
+
+                        function onAddOutfitInput(buttonRow) {
+                            let uniformsGroup = document.getElementById(UNIFORM_DIV_ID);
+                            uniformsGroup.removeChild(buttonRow);
+                            uniformsGroup.innerHTML += OUTFIT_INPUT_TEMPLATE;
+                            uniformsGroup.appendChild(buttonRow);
                         }
                     </script>
                     <div id="uniforms-group">
                         <div class="row">
                             <div class="form-group col">
                                 <label>Squad:</label>
-                                <input class="squad form-control" type="text" onblur="onSquadNameEdited(this);"/>
+                                <input class="squad form-control" type="text" onblur="onSquadNameEdited(this);" />
                             </div>
                             <div class="form-group col">
                                 <label>Outfit:</label>
                                 <select class="outfit form-control">
-                                    @{ 
-                                        foreach(var outfit in outfits.OutfitList)
+                                    @{
+                                        foreach (var outfit in outfits.OutfitList)
                                         {
                                             <option value="@outfit.OutfitName">@outfit.OutfitName</option>
                                         }
                                     }
                                 </select>
                             </div>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-success" onclick="onAddOutfitInput(this.parentElement)">+ Add Outfit</button>
                         </div>
                     </div>
                 </div>
@@ -89,37 +118,7 @@
                         </select>
                     </li>
                     <li class="list-group-item">
-                        <select class="form-control">
-                            <option>Snack</option>
-                            <option>Drinks</option>
-                            <option>Meal</option>
-                        </select>
-                        <label for="qty">Qty:</label>
-                        <input name="qty" type="number" class="form-control" />
-                        <label for="assignee">Assignee:</label>
-                        <select class="form-control">
-                            <option>Amanda N.</option>
-                            <option selected>Tad K.</option>
-                            <option>Andy N.</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item">
-                        <select class="form-control">
-                            <option>Snack</option>
-                            <option>Drinks</option>
-                            <option>Meal</option>
-                        </select>
-                        <label for="qty">Qty:</label>
-                        <input name="qty" type="number" class="form-control" />
-                        <label for="assignee">Assignee:</label>
-                        <select class="form-control">
-                            <option>Amanda N.</option>
-                            <option>Tad K.</option>
-                            <option selected>Andy N.</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item">
-                        <button class="btn btn-success">
+                        <button type="button" class="btn btn-success">
                             + Add
                         </button>
                     </li>
