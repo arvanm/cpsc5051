@@ -155,6 +155,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Img\Battle.png" />
     <Content Include="Content\Img\Diamond.png" />
     <Content Include="Content\Img\Emerald.png" />
@@ -166,6 +168,7 @@
     <Content Include="Content\Img\Superstar.jpg" />
     <Content Include="Content\Img\Warrior.png" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\bootstrap-reboot.min.css.map" />
@@ -178,6 +181,11 @@
     <Content Include="Content\Documents\absence_request.pdf" />
     <Content Include="Content\FieldtripPermission.pdf" />
     <Content Include="Content\Documents\FieldtripPermission.pdf" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Properties\PublishProfiles\VolunCheer - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Voluncheer20190514083013 - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
